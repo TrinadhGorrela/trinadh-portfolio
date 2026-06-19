@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Trinadh Gorrela — Java Full Stack Developer. Spring Boot, React, MySQL. Portfolio of projects, skills, and certifications." />
+    <title>Trinadh Gorrela | Java Full Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="nav-container">
+        <a href="#home" class="logo">Siva Satya Trinadh Gorrela</a>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="home">
+      <div id="heading">
+        <div>
+          <h1>Hello, I'm <br><span id="typingText"></span><span id="cursor">|</span></h1>
+          <p class="tagline">Java Full Stack Developer — built, secured, and deployed end-to-end.</p>
+          <p class="tech-stack">Java • Spring Boot • React • MySQL</p>
+        </div>
+        <img src="photo.png" alt="Trinadh Gorrela Photo" />
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        <strong>Java Full Stack Developer</strong> with hands-on experience building and deploying secure, scalable web applications using <strong>Spring Boot, React.js, MySQL, REST APIs, WebSocket (STOMP), and JWT authentication</strong>. Led a 3-member team as Team Lead on a production-deployed real-time chat platform, managing end-to-end development from backend architecture to frontend implementation. Strong in <strong>Core Java, OOP, Spring Security, and RESTful API design</strong> with a consistent focus on clean, maintainable code.
+      </p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="education-container">
+          <div class="education-item">
+              <div class="edu-header">
+                  <p><strong>Bonam Venkata Chalamayya Engineering College, Odalarevu</strong></p>
+                  <p class="edu-date">2022 – 2026</p>
+              </div>
+              <div class="edu-details">
+                  <p>Bachelor of Technology in Electronics and Communication Engineering</p>
+                  <p class="edu-score"><strong>CGPA: 8.57</strong></p>
+              </div>
+          </div>
+          
+          <div class="education-item">
+              <div class="edu-header">
+                  <p><strong>Aditya Junior College, Amalapuram</strong></p>
+                  <p class="edu-date">2020 – 2022</p>
+              </div>
+              <div class="edu-details">
+                  <p>Board of Intermediate Education AP</p>
+                  <p class="edu-score"><strong>Percentage: 90.7%</strong></p>
+              </div>
+          </div>
+
+          <div class="education-item edu-secondary">
+              <div class="edu-header">
+                  <p><strong>Surya High School, Draksharamam</strong></p>
+                  <p class="edu-date">2019 – 2020</p>
+              </div>
+              <div class="edu-details">
+                  <p>Board of Secondary Education AP</p>
+                  <p class="edu-score"><strong>Percentage: 84.6%</strong></p>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <div class="skills-container">
+        <div class="skill-card">
+          <h3>Languages</h3>
+          <p>Java (Core Java, OOP, Collections Framework), JavaScript (ES6+)</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Frameworks</h3>
+          <p>Spring Boot, Spring Security, Spring Data JPA, Hibernate</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Frontend</h3>
+          <p>React.js (Hooks), HTML5, CSS3</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Security & APIs</h3>
+          <p>JWT, BCrypt, RESTful API Design</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Databases</h3>
+          <p>MySQL</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Tools</h3>
+          <p>Git, GitHub, Maven, Postman, Docker, VS Code</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="projectcard">
+        <h3>Real-Time Chat Web Application <span style="font-size: 1rem; color: var(--text-secondary);">(12/2025 - 02/2026)</span></h3>
+        <p style="margin-bottom: 10px;"><strong>Tech Stack:</strong> React, Spring Boot, WebSocket, JWT, MySQL</p>
+        <ul style="color: var(--text-secondary); padding-left: 20px;">
+          <li style="margin-bottom: 8px;">Built a full-stack real-time messaging platform with REST API endpoints, supporting text messaging, live typing indicators, and online/offline presence tracking across accepted friend connections.</li>
+          <li style="margin-bottom: 8px;">Designed a file-sharing system handling 5 media types and 10+ file formats with a 70MB upload limit, including server-side file type validation and unique filename generation to prevent conflicts.</li>
+          <li style="margin-bottom: 8px;">Secured the application with stateless JWT authentication (10-hour token expiry), a custom Spring Security filter, and BCrypt password hashing to protect all user data and API routes.</li>
+          <li>Containerized the Spring Boot backend with Docker and deployed the full stack independently — backend on Render, frontend on Vercel, and MySQL on Aiven Cloud.</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://github.com/TrinadhGorrela/real-time-chat-app" target="_blank">GitHub</a>
+          <a href="https://real-time-chat-app-eta-roan.vercel.app/" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <div class="projectcard">
+        <h3>Sudoku Game Web Application <span style="font-size: 1rem; color: var(--text-secondary);">(02/2026 - 03/2026)</span></h3>
+        <p style="margin-bottom: 10px;"><strong>Tech Stack:</strong> React, Spring Boot, MySQL</p>
+        <ul style="color: var(--text-secondary); padding-left: 20px;">
+          <li style="margin-bottom: 8px;">Developed a full-stack Sudoku platform with backtracking-based puzzle generation, unique-solution validation, and 6 difficulty levels by algorithmically controlling cells removed from the solved board.</li>
+          <li style="margin-bottom: 8px;">Designed a layered Spring Boot backend across Controller, Service, Repository, and Mapper layers with custom exception handling and a Smart Hint System using Hidden Single strategies.</li>
+          <li>Implemented BCrypt-secured authentication and persistent user statistics tracking via Spring Data JPA and MySQL.</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://github.com/TrinadhGorrela/sudoku-react-springboot" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <div class="projectcard">
+        <h3>Finance Tracker Web Application <span style="font-size: 1rem; color: var(--text-secondary);">(04/2026 - 05/2026)</span></h3>
+        <p style="margin-bottom: 10px;"><strong>Tech Stack:</strong> React, Spring Boot, MySQL, JWT</p>
+        <ul style="color: var(--text-secondary); padding-left: 20px;">
+          <li style="margin-bottom: 8px;">Engineered a secure full-stack application implementing JWT authentication and ownership-based authorization, ensuring robust data privacy and protected routing for user accounts.</li>
+          <li style="margin-bottom: 8px;">Architected a RESTful Spring Boot backend using a layered design for transaction CRUD operations, integrated with a responsive, custom-themed React UI featuring date and category filtering.</li>
+          <li>Developed an interactive dashboard utilizing Recharts for expense visualization, providing real-time financial summaries and dynamic monthly budget status tracking.</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://github.com/TrinadhGorrela/finance-tracker" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <div class="skills-container">
+        <div class="skill-card">
+          <h3>Full Stack Java Development Training Program</h3>
+          <p>TalentShine</p>
+          <p style="font-size: 0.8rem; margin-top: 5px;">12/2025 - 04/2026</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Frontend Developer (React)</h3>
+          <p>HackerRank</p>
+          <p style="font-size: 0.8rem; margin-top: 5px;">02/2026</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Java Certificate</h3>
+          <p>HackerRank</p>
+          <p style="font-size: 0.8rem; margin-top: 5px;">01/2026</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>SQL Certificate</h3>
+          <p>HackerRank</p>
+          <p style="font-size: 0.8rem; margin-top: 5px;">05/2026</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <div class="contact-container">
+        <div class="contact-info">
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:trinadh.gorrela2004@gmail.com">trinadh.gorrela2004@gmail.com</a>
+          </p>
+          <p>
+            <strong>Phone:</strong> <a href="tel:+918858093333">(+91) 8858093333</a>
+          </p>
+          <p>
+            <strong>LinkedIn:</strong>
+            <a href="https://linkedin.com/in/trinadhgorrela" target="_blank">linkedin.com/in/trinadhgorrela</a>
+          </p>
+          <p> 
+            <strong>GitHub:</strong>
+            <a href="https://github.com/TrinadhGorrela" target="_blank">github.com/TrinadhGorrela</a>
+          </p>
+        </div>
+
+        <div class="contact-action">
+          <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+          <a href="mailto:trinadh.gorrela2004@gmail.com" class="email-btn">Say Hello</a>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
