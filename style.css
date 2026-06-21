@@ -147,7 +147,9 @@ p {
 /* ===== HOME SECTION ===== */
 #home {
   background: transparent;
-  padding-top: 0; /* Centered by flex in main styles */
+  padding-top: 0;
+  padding-bottom: 40px;
+  min-height: 70vh;
 }
 
 #heading {
@@ -245,6 +247,15 @@ p {
 /* ===== EDUCATION SPECIFIC ===== */
 .education-item {
   margin-bottom: 30px;
+  padding: 25px;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  box-shadow: var(--shadow-light);
+  transition: all 0.25s ease;
+}
+.education-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 30px -15px rgba(2, 12, 27, 0.7);
 }
 .education-item:last-child {
   margin-bottom: 0;
@@ -281,7 +292,44 @@ p {
 @media (max-width: 600px) {
   .edu-header, .edu-details {
     flex-direction: column;
-    gap: 5px;
+    gap: 4px;
+    align-items: flex-start;
+  }
+  .education-item {
+    padding: 15px;
+  }
+  .edu-details {
+    margin-top: 15px;
+  }
+  #education .edu-header p:first-child {
+    font-size: 1.05rem;
+    line-height: 1.3;
+  }
+  .edu-secondary .edu-header p:first-child {
+    font-size: 0.95rem !important;
+  }
+  #education .edu-details p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  #education .edu-date, #education .edu-score {
+    font-size: 0.85rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 4px;
+    align-self: flex-end;
+  }
+  #education .edu-date {
+    color: var(--text-secondary);
+    background: rgba(136, 146, 176, 0.1);
+  }
+  #education .edu-score {
+    color: var(--accent-primary);
+    background: var(--accent-glow);
+  }
+  #education .edu-score strong {
+    color: var(--accent-primary);
   }
 }
 
@@ -325,8 +373,26 @@ p {
   font-size: 0.9rem;
 }
 
-/* ===== PROJECTS SECTION ===== */
+/* ===== CERTIFICATIONS SECTION ===== */
+#certifications .skills-container {
+  justify-content: center;
+}
+#certifications .skill-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#certifications .skill-card h3 {
+  margin-bottom: 5px;
+}
+#certifications .skill-card p {
+  margin: 0;
+  line-height: 1.4;
+}
 
+/* ===== PROJECTS SECTION ===== */
 
 .projectcard {
   background: var(--bg-secondary);
@@ -378,10 +444,6 @@ p {
 }
 
 /* ===== CONTACT FORM ===== */
-#contact {
-  /* Inherits max-width from section */
-}
-
 .contact-container {
   display: flex;
   gap: 50px;
@@ -456,22 +518,123 @@ p {
 
 /* Responsive fixes */
 @media (max-width: 768px) {
+  #about p, .projectcard p, .projectcard li {
+    text-align: left;
+  }
   #heading {
     flex-direction: column-reverse;
     text-align: center;
+    gap: 30px;
   }
   #heading h1 {
-    font-size: 40px;
+    font-size: clamp(32px, 8vw, 45px);
+  }
+  #heading p.tagline {
+    font-size: 1.2rem;
   }
   #heading div {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+  #heading img {
+    width: 180px;
+    height: 180px;
+    margin-top: 30px;
+    box-shadow: 12px 12px 0px 0px rgba(100, 255, 218, 0.2);
+  }
   .contact-container {
     flex-direction: column;
+    gap: 30px;
+  }
+  #navbar {
+    padding: 15px 20px;
+    height: auto;
+  }
+  .logo {
+    font-size: 1.2rem;
+    line-height: 1.3;
+    display: block;
   }
   #navbar ul {
     display: none;
+  }
+  section {
+    padding: 80px 20px;
+    min-height: auto;
+  }
+  h2::after {
+    width: 100px;
+  }
+  .projectcard {
+    padding: 1.5rem;
+  }
+  .projectcard h3 {
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .projectcard h3 span {
+    font-size: 0.85rem !important;
+    color: var(--text-secondary) !important;
+    background: rgba(136, 146, 176, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 8px;
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  #heading img {
+    width: 150px;
+    height: 150px;
+    box-shadow: 10px 10px 0px 0px rgba(100, 255, 218, 0.2);
+  }
+  #heading h1 {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  .projectcard h3 {
+    font-size: 1.15rem;
+  }
+  h2::after {
+    width: 50px;
+  }
+  p, .projectcard p, .projectcard li {
+    font-size: 0.95rem;
+  }
+  .project-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .project-links a {
+    text-align: center;
+  }
+  .skill-card {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .contact-action {
+    min-width: 100%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+  }
+  .contact-info {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  .contact-info p {
+    font-size: 0.95rem;
+    word-break: break-word;
+  }
+  .email-btn {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
   }
 }
